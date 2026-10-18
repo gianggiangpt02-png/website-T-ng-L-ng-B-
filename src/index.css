@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Lora", Georgia, "Times New Roman", serif;
+  --font-sans: "Be Vietnam Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  --color-primary: #6B321C;
+  --color-dark: #432A1D;
+  --color-terracotta: #8A4B2A;
+  --color-gold: #DDA33A;
+  --color-gold-light: #F2C96D;
+  --color-cream: #FFF8E9;
+  --color-cream-muted: #F5E8D0;
+  --color-olive: #66734A;
+  --color-olive-light: #87956B;
+}
+
+@layer base {
+  :root {
+    --color-primary: #6B321C;
+    --color-dark: #432A1D;
+    --color-terracotta: #8A4B2A;
+    --color-gold: #DDA33A;
+    --color-gold-light: #F2C96D;
+    --color-cream: #FFF8E9;
+    --color-cream-muted: #F5E8D0;
+    --color-olive: #66734A;
+    --color-olive-light: #87956B;
+    --color-text-main: #432A1D;
+    --color-text-sub: #79695B;
+    --color-border: #E5D1B5;
+  }
+
+  html {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #432A1D;
+    background-color: #FFF8E9;
+    overflow-x: hidden;
+  }
+
+  /* Headings: Lora with full Vietnamese tone marks */
+  h1, h2, h3, h4, h5, h6, .font-serif, .font-editorial {
+    font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
+  }
+
+  /* Children of headings inherit font-family so spans don't break or jump fonts */
+  h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+    font-family: inherit;
+  }
+
+  /* Body text, buttons, inputs default to Be Vietnam Pro */
+  p, a, button, input, select, textarea, li, label {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Explicit font-serif override */
+  .font-serif, p.font-serif, span.font-serif, a.font-serif, div.font-serif, blockquote {
+    font-family: 'Lora', Georgia, 'Times New Roman', serif !important;
+  }
+
+  /* Explicit font-sans override */
+  .font-sans, p.font-sans, span.font-sans, div.font-sans {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif !important;
+  }
+}
+
+/* Custom subtle scrollbar & utility classes */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8E9;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5D1B5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #DDA33A;
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Tương Làng Bợ - Tinh Hoa Tương Truyền Thống Đất Tổ",
+  "description": "Thương hiệu tương truyền thống Làng Bợ Phú Thọ. Hương vị quê nhà, gìn giữ nét xưa qua từng chum tương sành ủ nắng tự nhiên.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
